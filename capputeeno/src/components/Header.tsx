@@ -5,6 +5,7 @@ interface HeaderProps {}
 
 import { Saira_Stencil_One } from "next/font/google";
 import SearchBar from "./SearchBar";
+import CartControl from "./CartControl";
 
 const sairaStencil = Saira_Stencil_One({
     weight: ["400"],
@@ -16,6 +17,12 @@ const TagHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 20px 160px;
+    > div {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 const Logo = styled.a`
@@ -30,6 +37,7 @@ export default function Header(props: HeaderProps) {
             <Logo className={sairaStencil.className}>capputeeno</Logo>
             <div>
                 <SearchBar placeholder="Procurando por algo específico?"></SearchBar>
+                <CartControl />
             </div>
         </TagHeader>
     );
