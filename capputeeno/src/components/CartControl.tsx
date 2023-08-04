@@ -25,7 +25,7 @@ const Container = styled.div`
 
 interface CartControlProps {}
 export default function CartControl(props: CartControlProps) {
-    const { value } = useLocalStorage("cart-items");
+    const { value } = useLocalStorage("cart-items", []);
     return (
         <Container>
             <ShoppingBagIcon />

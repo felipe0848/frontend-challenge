@@ -4,7 +4,7 @@ import FilterByType from "./FilterByType";
 
 const FilterContainer = styled.div`
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     width: 100%;
 `;
 
@@ -14,8 +14,8 @@ export default function FilterBar(props: FilterBarProps) {
         <FilterContainer>
             <FilterByType />
 
-            {/* <div>filtro organizar</div>
-            <div>paginação</div> */}
+            <div>Organizar por \/</div>
+            {/* <div>paginação</div>  */}
         </FilterContainer>
     );
 }
