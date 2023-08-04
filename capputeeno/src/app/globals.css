@@ -2,9 +2,11 @@
     --border-radius: 12px;
     --logo-color: #5d5d6d;
     --secondary-color: #f3f5f6;
-    --text-dark: #737380;
+    --text-dark-primary: #41414d;
+    --text-dark-secondary: #737380;
     --delete-color: #de3838;
     --text-light: #e1e1e6;
+    --orange-low: #ffa585;
 }
 
 * {
