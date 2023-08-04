@@ -29,6 +29,7 @@ const Logo = styled.a`
     color: var(--logo-color);
     font-size: 40px;
     line-height: 150%;
+    cursor: pointer;
 `;
 
 export default function Header(props: HeaderProps) {
