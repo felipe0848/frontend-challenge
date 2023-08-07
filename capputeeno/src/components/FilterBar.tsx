@@ -1,10 +1,12 @@
 "use client";
 import { styled } from "styled-components";
 import FilterByType from "./FilterByType";
+import FilterByPriority from "./FIlterByPriority";
 
 const FilterContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: start;
     width: 100%;
 `;
 
@@ -14,7 +16,8 @@ export default function FilterBar(props: FilterBarProps) {
         <FilterContainer>
             <FilterByType />
 
-            <div>Organizar por \/</div>
+            <FilterByPriority />
+
             {/* <div>paginação</div>  */}
         </FilterContainer>
     );

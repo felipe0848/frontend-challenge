@@ -1,5 +1,5 @@
 import { useFilter } from "@/hooks/useFilter";
-import { FilterType } from "@/types/filtertypes";
+import { FilterType } from "@/types/FilterTypes";
 import { styled } from "styled-components";
 
 interface FilterItemProps {
@@ -25,6 +25,7 @@ const FilterItem = styled.li<FilterItemProps>`
     font-weight: ${(props) => (props.selected ? "600" : "400")};
     line-height: 22px;
     text-transform: uppercase;
+    cursor: pointer;
 
     border-bottom: ${(props) =>
         props.selected ? "4px solid var(--orange-low)" : ""};
