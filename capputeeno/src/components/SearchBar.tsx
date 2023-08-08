@@ -26,12 +26,18 @@ const InputContainer = styled.div`
     }
 `;
 
-interface SearchBarProps extends InputHTMLAttributes<HTMLInputElement> {}
+interface SearchBarProps extends InputHTMLAttributes<HTMLInputElement> {
+    value: string;
+    handleChange: (value: string) => void;
+}
 
 export default function SearchBar(props: SearchBarProps) {
     return (
         <InputContainer>
-            <PrimaryInput {...props} />
+            <PrimaryInput
+                onChange={(event) => props.handleChange(event.target.value)}
+                {...props}
+            />
             <SearchIcon />
         </InputContainer>
     );
