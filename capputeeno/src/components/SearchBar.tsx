@@ -1,6 +1,6 @@
 import { InputHTMLAttributes } from "react";
 import { styled } from "styled-components";
-import SearchIcon from "./SearchIcon";
+import SearchIcon from "./icons/SearchIcon";
 
 const PrimaryInput = styled.input`
     font-family: inherit;
