@@ -1,10 +1,10 @@
 "use client";
 import { ProductsFetchResponse } from "@/types/ProductsFetchResponse";
+import { monutQuery } from "@/utils/graphQLSources";
 import { useQuery } from "@tanstack/react-query";
 import axios, { AxiosPromise } from "axios";
-import { useFilter } from "./useFilter";
-import { GetCategoryByType, monutQuery } from "@/utils/graphQLSources";
 import { useDeferredValue } from "react";
+import { useFilter } from "./useFilter";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL as string;
 
