@@ -1,8 +1,8 @@
-import { styled } from "styled-components";
-import { ArrowIcon } from "./icons/ArrowIcon";
-import { useState } from "react";
 import { useFilter } from "@/hooks/useFilter";
 import { PriorityType } from "@/types/PriorityTypes";
+import { useState } from "react";
+import { styled } from "styled-components";
+import { ArrowIcon } from "./icons/ArrowIcon";
 
 const FilterContainer = styled.div`
     display: flex;
@@ -18,9 +18,13 @@ const FilterContainer = styled.div`
         display: flex;
         align-items: center;
         font-family: inherit;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 22px;
         color: var(--text-dark-secondary);
+
+        @media (min-width: ${(props) => props.theme.tableBreakPoint}) {
+            font-size: 14px;
+        }
         svg {
             margin-left: 8px;
         }

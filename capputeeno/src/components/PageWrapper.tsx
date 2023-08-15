@@ -4,6 +4,10 @@ import styled from "styled-components";
 
 export const PageWrapper = styled.main`
     min-height: 100vh;
-    padding: 34px 160px;
+    padding: 24px 48px;
     background-color: var(--bg-primary);
+
+    @media (min-width: ${(props) => props.theme.desktopBreakPoint}) {
+        padding: 34px 160px;
+    }
 `;

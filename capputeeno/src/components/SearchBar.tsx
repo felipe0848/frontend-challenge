@@ -8,21 +8,31 @@ const PrimaryInput = styled.input`
     font-weight: 400;
     background-color: var(--secondary-color);
 
-    width: 352px;
-    padding: 10px 16px;
+    width: 268px;
+    font-size: 12px;
+    padding: 8px 14px;
 
     border-radius: 8px;
     border: none;
+
+    @media (min-width: ${(props) => props.theme.tableBreakPoint}) {
+        width: 352px;
+        font-size: 14px;
+        padding: 10px 16px;
+    }
 `;
 
 const InputContainer = styled.div`
     position: relative;
-    width: 352px;
+    width: 268px;
     svg {
         position: absolute;
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
+    }
+    @media (min-width: ${(props) => props.theme.tableBreakPoint}) {
+        width: 352px;
     }
 `;
 
