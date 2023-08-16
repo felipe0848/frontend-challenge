@@ -3,7 +3,7 @@
 import styled from "styled-components";
 
 export const PageWrapper = styled.main`
-    min-height: 100vh;
+    min-height: max-content;
     padding: 24px 48px;
     background-color: var(--bg-primary);
 

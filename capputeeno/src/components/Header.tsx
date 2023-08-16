@@ -49,7 +49,7 @@ export default function Header(props: HeaderProps) {
             <div>
                 <SearchBar
                     placeholder="Procurando por algo específico?"
-                    handleChange={setSearch}
+                    $handleChange={setSearch}
                     value={search}
                 ></SearchBar>
                 <CartControl />
