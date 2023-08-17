@@ -1,10 +1,12 @@
 import { formatPriceInReais } from "@/utils/formatPriceInReais";
-import { styled } from "styled-components";
+import { useRouter } from "next/navigation";
+import styled from "styled-components";
 
 interface ProductCardProps {
     title: string;
     price: number;
     url: string;
+    id: string;
 }
 
 const CardContainer = styled.div`
@@ -14,7 +16,7 @@ const CardContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: start;
-
+    cursor: pointer;
     img {
         border-radius: 4px 4px 0 0;
         width: 256px;
@@ -54,8 +56,12 @@ const CardDescription = styled.div`
 
 export default function ProductCard(props: ProductCardProps) {
     const formattedPrice = formatPriceInReais(props.price);
+    const router = useRouter();
+    const handleClick = () => {
+        router.push("/product?id=" + props.id);
+    };
     return (
-        <CardContainer>
+        <CardContainer onClick={handleClick}>
             <img src={props.url} alt={props.title} />
             <CardDescription>
                 <h3>{props.title}</h3>

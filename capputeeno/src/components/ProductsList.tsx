@@ -1,6 +1,6 @@
 import { useProducts } from "@/hooks/useProducts";
+import styled from "styled-components";
 import ProductCard from "./ProductCard";
-import { styled } from "styled-components";
 
 const ListContainer = styled.div`
     display: grid;
@@ -19,6 +19,7 @@ export default function ProductsList() {
             {data?.map((product) => (
                 <ProductCard
                     key={product.id}
+                    id={product.id}
                     title={product.name}
                     price={product.price_in_cents}
                     url={product.image_url}

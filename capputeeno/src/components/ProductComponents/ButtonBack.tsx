@@ -1,9 +1,10 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import styled from "styled-components";
 import BackIcon from "../icons/BackIcon";
 
-const ButtonWIcon = styled.button`
+const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,12 +20,18 @@ const ButtonWIcon = styled.button`
     font-weight: 500;
     line-height: 150%;
 `;
-
-export default function ButtonBack() {
+interface ButtonBackProps {
+    navigate: string;
+}
+export default function ButtonBack({ navigate }: ButtonBackProps) {
+    const router = useRouter();
+    const handleNavigate = () => {
+        router.push(navigate);
+    };
     return (
-        <ButtonWIcon>
+        <Button onClick={handleNavigate}>
             <BackIcon />
             Voltar
-        </ButtonWIcon>
+        </Button>
     );
 }

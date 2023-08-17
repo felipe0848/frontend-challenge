@@ -19,7 +19,7 @@ export function GetPriority(priority: PriorityType) {
     return "";
 }
 
-export function monutQuery(type: FilterType, priority: PriorityType) {
+export function montQuery(type: FilterType, priority: PriorityType) {
     if (type === FilterType.ALL && priority === PriorityType.POPULARITY)
         return `query{
     allProducts(sortField:"sales" sortOrder:"DSC"){
