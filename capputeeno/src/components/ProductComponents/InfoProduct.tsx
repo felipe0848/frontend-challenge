@@ -19,6 +19,8 @@ const Container = styled.div`
 
     img {
         width: 50%;
+        max-width: 640px;
+        max-height: 580px;
     }
     div {
         display: flex;
